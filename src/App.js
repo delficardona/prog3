@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Header from './Components/Header/Header'
-import Card from './Components/Card/Card'
+import Main from './Components/Main/Main'
 import Footer from './Components/Footer/Footer'
 
 function App() {
@@ -14,16 +14,7 @@ function App() {
       </header>
 
       <main className='main'>
-        <button type="button">Cargar más tarjetas</button>
-          <section className="card-container">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-          </section>
+        <Main/>
       </main>
 
       <footer className='footer'>
