@@ -9,10 +9,12 @@ function App() {
   return (
     <div className="App">
       <header className='header'>
+        <h1>LD Movies</h1>
         <Header />
       </header>
       <main className='main'>
         <Main />
+
       </main>
       <footer className='footer'>
         <Footer />

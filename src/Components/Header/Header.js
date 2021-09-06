@@ -11,8 +11,7 @@ class Header extends Component{
     render(){
         return(
             <React.Fragment>
-                <header>
-                    <h1>LD Movies</h1>
+                    
                     <section>
                         <p>Ordenar ASC/ DESC</p>
                         <i className="fas fa-th"></i>
@@ -21,8 +20,7 @@ class Header extends Component{
                             <input type="text" name="search" id="" placeholder="Search"/>
                             <button type="submit"><i className="fas fa-search"></i></button>
                         </form>
-                    </section>
-                </header>
+                    </section> 
             </React.Fragment>
 
         );
