@@ -11,7 +11,6 @@ class Header extends Component{
     render(){
         return(
             <React.Fragment>
-                    
                     <section>
                         <p>Ordenar ASC/ DESC</p>
                         <i className="fas fa-th"></i>

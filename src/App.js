@@ -12,10 +12,20 @@ function App() {
         <h1>LD Movies</h1>
         <Header />
       </header>
-      <main className='main'>
-        <Main />
 
+      <main className='main'>
+        <button type="button">Cargar más tarjetas</button>
+          <section className="card-container">
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </section>
       </main>
+
       <footer className='footer'>
         <Footer />
       </footer>
