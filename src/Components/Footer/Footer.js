@@ -12,9 +12,9 @@ class Footer extends Component{
         return(
             <React.Fragment>
                 <ul class="team">
-                <li>Nombre integrante 1</li>
-                <li>Nombre integrante 2</li>
-                <li>Nombre integrante 3</li>
+                <li>Delfina Cardona</li>
+                <li>Lola Romano</li>
+                <li>Luisa Nazar Anchorena</li>
                 </ul>
             </React.Fragment>
    );
