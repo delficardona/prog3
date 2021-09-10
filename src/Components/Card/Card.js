@@ -8,6 +8,7 @@ class Card extends Component{
         }
     }
 
+
     render(){
         return(
             <React.Fragment>

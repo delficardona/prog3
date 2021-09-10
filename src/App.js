@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Header from './Components/Header/Header'
 import Main from './Components/Main/Main'
@@ -8,16 +7,16 @@ import Footer from './Components/Footer/Footer'
 function App() {
   return (
     <div className="App">
-      <header className='header'>
-        <h1>LD Movies</h1>
+      <header>
+        
         <Header />
       </header>
 
-      <main className='main'>
+      <main>
         <Main/>
       </main>
 
-      <footer className='footer'>
+      <footer>
         <Footer />
       </footer>
     </div>

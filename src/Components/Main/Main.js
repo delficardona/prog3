@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Card from '../Card/Card'
+import './main.css'
 
 
 class Main extends Component{
@@ -7,14 +8,16 @@ class Main extends Component{
         super(props)
         this.state = {
 
+
         }
     }
 
     render(){
         return(
             <React.Fragment>
+            <section className="main">
                  <button type="button">Cargar más tarjetas</button>
-                    <section className="card-container">
+                    <article className="card-container">
                         <Card />
                         <Card />
                         <Card />
@@ -22,7 +25,8 @@ class Main extends Component{
                         <Card />
                         <Card />
                         <Card />
-                    </section>
+                    </article>
+            </section>
             </React.Fragment>
 
         );

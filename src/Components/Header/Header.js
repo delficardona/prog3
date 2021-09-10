@@ -26,9 +26,9 @@ controlarCambios(event){
         return(
             <React.Fragment>
                 <header>
-                    <section>
-                    <h1> <a href="/">LD Movies</a></h1>
-                       
+                    <section className="header">
+                        <img src="./images/logo.png"></img>
+                        <h1>LD Movies</h1>
                         <i className="fas fa-th"></i>
                         <i className="fas fa-align-justify"></i>
                         <form action="" onSubmit={(event)=>this.preventSubmit(event)}>
