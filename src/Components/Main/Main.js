@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Card from '../Card/Card'
+import Movies from '../Movies/Movies'
 import './main.css'
 
 
@@ -18,13 +18,7 @@ class Main extends Component{
             <section className="main">
                  <button type="button">Cargar más tarjetas</button>
                     <article className="card-container">
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
+                        <Movies />
                     </article>
             </section>
             </React.Fragment>
