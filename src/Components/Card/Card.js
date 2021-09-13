@@ -6,33 +6,33 @@ class Card extends Component{
         super(props)
         this.state = {
             texto:'ver mas',
-            show: false,
+            viewMore: false,
         }
     }
 
-    verMas () {
-       if (this.state.show){
+    viewMore () {
+       if (this.state.viewMore){
            this.setState ({
             texto:'ver mas',
-            show: false,
+            viewMore: false,
            })
         } else {
             this.setState ({
             texto:'ocultar',
-            show: true,
+            viewMore: true,
            })
        }
     }
 
     preventAndShow (prevent){
         prevent.preventDefault ();
-        this.verMas();
+        this.viewMore();
     }
 
     render(){
         console.log(this.props)
         return(
-            <article>
+            <article className="card">
                 <section className="navigation">
                     <div>
                         <i className="fas fa-chevron-left"></i>
@@ -46,7 +46,10 @@ class Card extends Component{
                         <p> {this.props.dataMovies.title} </p>
                         <p> {this.props.dataMovies.overview} </p>
                     </section>
-                    <a href="">Ver más</a>
+                    <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`} > Fecha de estreno: {this.props.dataMovies.release_date}</p>
+                    <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`} > Popularidad: {this.props.dataMovies.popularity}</p>
+                    <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`} > Idioma: {this.props.dataMovies.original_language}</p>
+                    <p className='more' onClick={ () => this.viewMore()}>{this.state.texto}</p>
                 </main>
                 </article>
         );
