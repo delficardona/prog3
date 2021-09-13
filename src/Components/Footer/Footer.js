@@ -11,7 +11,7 @@ class Footer extends Component{
     render(){
         return(
             <React.Fragment>
-                <ul class="team">
+                <ul className="team">
                 <li>Delfina Cardona</li>
                 <li>Lola Romano</li>
                 <li>Luisa Nazar Anchorena</li>

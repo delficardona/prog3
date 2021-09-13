@@ -1,40 +1,57 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import './card.css'
 
 class Card extends Component{
     constructor(props){
         super(props)
         this.state = {
-
+            texto:'ver mas',
+            show: false,
         }
     }
 
+    verMas () {
+       if (this.state.show){
+           this.setState ({
+            texto:'ver mas',
+            show: false,
+           })
+        } else {
+            this.setState ({
+            texto:'ocultar',
+            show: true,
+           })
+       }
+    }
+
+    preventAndShow (prevent){
+        prevent.preventDefault ();
+        this.verMas();
+    }
 
     render(){
+        console.log(this.props)
         return(
-            <React.Fragment>
-                <article>
+            <article>
                 <section className="navigation">
                     <div>
                         <i className="fas fa-chevron-left"></i>
                         <i className="fas fa-chevron-right"></i>
                     </div>
-                    <i className="far fa-window-close"></i>
+                    <i className="far fa-window-close" onClick={()=> this.state.deleteCard(this.state.dataMovies.id)}></i>
                 </section>
                 <main>
-                    <img src="./img/image-default.png" alt=""/>
-                    {/* <h3>{this.props.data.title}</h3> */}
-                    {/* <p className="description">{this.props.data.overview}</p> */}
+               <img src={`https://image.tmdb.org/t/p/w500${this.props.dataMovies.poster_path}`} alt="pelicula"/> 
                     <section className="aditional-info">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
+                        <p> {this.props.dataMovies.title} </p>
+                        <p> {this.props.dataMovies.overview} </p>
                     </section>
                     <a href="">Ver más</a>
                 </main>
                 </article>
-            </React.Fragment>
         );
     }
 }
 
-export default Card;
+
+export default Card; 

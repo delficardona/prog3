@@ -27,7 +27,7 @@ controlarCambios(event){
             <React.Fragment>
                 <header>
                     <section className="header">
-                        <img src="./images/logo.png"></img>
+                        <img src="./images/logo.png" alt="logo"></img>
                         <h1>LD Movies</h1>
                         <i className="fas fa-th"></i>
                         <i className="fas fa-align-justify"></i>
