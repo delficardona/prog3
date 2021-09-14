@@ -13,7 +13,7 @@ class Footer extends Component{
             <React.Fragment>
                 <div>
                 <p className="nombres">Lola Romano, Luisa Nazar Anchorena, Delfina Cardona</p>
-                <p className="nombres1">Nuestros datos © 2021 Jordys Argentina Defensa de las y los Consumidores</p>
+                <p className="nombres1">Nuestros datos © 2021 LD Movies Argentina Defensa de las y los Consumidores</p>
                 </div>
             </React.Fragment>
    );

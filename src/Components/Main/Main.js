@@ -68,7 +68,7 @@ class Main extends Component{
         })
     }
 
-    orientacion(){
+    orientacionCards(){
         if (this.state.orientacion) {
             this.setState({
                 orientacion: false,
@@ -87,18 +87,27 @@ class Main extends Component{
     render(){
         return(
             <React.Fragment>
-            <Header filtrarMovies={(textoAFiltrar)=> this.filtrarMovies(textoAFiltrar)}/>
-            <main className="main">
-            <button className="cargarMas" type="button" onClick={() => this.addCards()}>Cargar más tarjetas</button>
-            <section className="card-container">
-
-            { this.state.isLoaded === false ? <p> Cargando...</p> : 
-                        this.state.movies.map (movie => <Card dataMovies={movie}
-                        deleteCard={(moviesABorrar)=> this.deleteCard(moviesABorrar)}key={movie.id}/>)   
-            }
-
-            </section>
-            </main>
+                <Header filtrarMovies={(textoAFiltrar)=> this.filtrarMovies(textoAFiltrar)}/>
+                <main className="main">
+                    <button className="cargarMas" type="button" onClick={() => this.addCards()}>Cargar más tarjetas</button>
+                    <i type="button "className= {`fas ${this.state.texto}`}  onClick={ ()=> this.orientacionCards()}></i> 
+                    <section className="card-container">
+                        
+                            { this.state.isLoaded === false ?
+                                <iframe className="cargando" src="https://giphy.com/embed/17mNCcKU1mJlrbXodo"></iframe>: 
+                                    this.state.movies.length === 0 ? 
+                                <p>No se encontraron resultados de búsqueda</p> :
+                            
+                        
+                                <div className={`card-container ${this.state.orientacion ? 'vertical' : 'horizontal'}`}>
+                                            {this.state.movies.map (movie => <Card dataMovies={movie}
+                                                deleteCard={(moviesABorrar)=> this.deleteCard(moviesABorrar)} key={movie.id}/>
+                                            )}
+                                </div> 
+                            }
+                        
+                    </section>
+                </main>
             </React.Fragment>
 
         );

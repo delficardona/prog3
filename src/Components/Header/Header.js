@@ -28,9 +28,7 @@ controlarCambios(event){
                 <header>
                     <section className="header">
                         <img src="./images/logo.png" alt="logo"></img>
-                        <h1>LD Movies</h1>
-                        <i className="fas fa-th"></i>
-                        <i className="fas fa-align-justify"></i>
+                        <h1> LD MOVIES</h1>
                         <form action="" onSubmit={(event)=>this.preventSubmit(event)}>
                             <input type="text" name="search" id="" placeholder="Buscar Pelicula" onChange={(e)=>this.controlarCambios(e)} value={this.state.filterBy} />
                            

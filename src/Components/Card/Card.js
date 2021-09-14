@@ -30,10 +30,6 @@ class Card extends Component{
         return(
             <article className="card">
                 <section className="navigation">
-                    <div>
-                        <i className="fas fa-chevron-left"></i>
-                        <i className="fas fa-chevron-right"></i>
-                    </div>
                     <i className="far fa-window-close" onClick={()=> this.props.deleteCard(this.props.dataMovies.id)}></i>
                 </section>
                 <main>
