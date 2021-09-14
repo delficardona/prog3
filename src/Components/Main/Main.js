@@ -91,8 +91,12 @@ class Main extends Component{
             <React.Fragment>
                 <Header filtrarMovies={(textoAFiltrar)=> this.filtrarMovies(textoAFiltrar)}/>
                 <main className="main">
-                    <button className="cargarMas" type="button" onClick={() => this.addCards()}>Cargar más tarjetas</button>
-                    <i type="button "className= {`fas ${this.state.texto}`}  onClick={ ()=> this.orientacionCards()}></i> 
+
+                    <div className="costado">
+                        <button className="agregar" type="button" onClick={() => this.addCards()}>Cargar más tarjetas</button>
+                        <i type="button "className= {`fas ${this.state.texto}`}  onClick={ ()=> this.orientacionCards()}></i> 
+                    </div> 
+
                     <section className="card-container">
                         
                             { this.state.isLoaded === false ?
@@ -109,6 +113,7 @@ class Main extends Component{
                             }
                         
                     </section>
+
                 </main>
             </React.Fragment>
 

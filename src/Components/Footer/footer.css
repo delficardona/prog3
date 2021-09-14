@@ -1,8 +1,8 @@
 p.nombres {
     display: flex;
     align-items: center;
-    font-size: 2px;
-    color: white;
+    font-size: 10px;
+    color: black;
     padding-top: 50px;
     padding-left: 30px;
     font-family: var(--secondary-font);
@@ -13,7 +13,7 @@ p.nombres {
     display: flex;
     align-items: center;
     font-size: 10px;
-    color: white;
+    color: black;
     padding-top: 0px;
     padding-left: 30px;
     font-family: var(--secondary-font);
