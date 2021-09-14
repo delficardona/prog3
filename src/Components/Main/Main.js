@@ -10,10 +10,10 @@ class Main extends Component{
         this.state = {
             movies: [],
             moviesIniciales: [],
-            //popular: null,
-            //upcoming: null,
             pagina: 1,
             isLoaded: false,
+            orientacion: false,
+            texto: 'fa-align-justify',
         }
     }
 
@@ -27,10 +27,9 @@ class Main extends Component{
             this.setState({
                 movies: data.results,
                 moviesIniciales: data.results,
-                //popular: data.results,
-                //upcoming: data.results,
                 isLoaded: true,
                 pagina:this.state.pagina + 1,
+                
 
             })
         })
@@ -45,7 +44,8 @@ class Main extends Component{
         .then( data => {
             console.log(data);
             this.setState({
-                moviesIniciales: this.state.movies.concat(data.results),
+                movies: this.state.movies.concat(data.results),
+                moviesIniciales: this.state.moviesIniciales.concat(data.results),
                 pagina: this.state.pagina + 1,
             })
         })
@@ -66,7 +66,23 @@ class Main extends Component{
         this.setState({
             movies: moviesFiltradas,
         })
-    } 
+    }
+
+    orientacion(){
+        if (this.state.orientacion) {
+            this.setState({
+                orientacion: false,
+                texto: 'fa-align-justify'
+            })
+            
+        }else{
+            this.setState({
+                orientacion: true,
+                texto: 'fa-th'
+            })
+            
+        }
+    }
 
     render(){
         return(
