@@ -11,11 +11,10 @@ class Footer extends Component{
     render(){
         return(
             <React.Fragment>
-                <ul className="team">
-                <li>Delfina Cardona</li>
-                <li>Lola Romano</li>
-                <li>Luisa Nazar Anchorena</li>
-                </ul>
+                <div>
+                <p className="nombres">Lola Romano, Luisa Nazar Anchorena, Delfina Cardona</p>
+                <p className="nombres1">Nuestros datos © 2021 Jordys Argentina Defensa de las y los Consumidores</p>
+                </div>
             </React.Fragment>
    );
 }

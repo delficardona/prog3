@@ -1,1 +1,21 @@
-
+p.nombres {
+    display: flex;
+    align-items: center;
+    font-size: 2px;
+    color: white;
+    padding-top: 50px;
+    padding-left: 30px;
+    font-family: var(--secondary-font);
+    font-weight: 700;
+  }
+  
+  p.nombres1 {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    color: white;
+    padding-top: 0px;
+    padding-left: 30px;
+    font-family: var(--secondary-font);
+    font-weight: 700;
+  }

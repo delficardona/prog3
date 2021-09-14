@@ -1,7 +1,9 @@
 .header{
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
     height: 60px;
     align-items: center;
-
+    padding-top: 30px;
 }

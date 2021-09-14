@@ -45,7 +45,7 @@ class Main extends Component{
         .then( data => {
             console.log(data);
             this.setState({
-                movies: this.state.movies.concat(data.results),
+                moviesIniciales: this.state.movies.concat(data.results),
                 pagina: this.state.pagina + 1,
             })
         })
@@ -73,7 +73,7 @@ class Main extends Component{
             <React.Fragment>
             <Header filtrarMovies={(textoAFiltrar)=> this.filtrarMovies(textoAFiltrar)}/>
             <main className="main">
-            <button type="button" onClick={() => this.addCards()}>Cargar más tarjetas</button>
+            <button className="cargarMas" type="button" onClick={() => this.addCards()}>Cargar más tarjetas</button>
             <section className="card-container">
 
             { this.state.isLoaded === false ? <p> Cargando...</p> : 
