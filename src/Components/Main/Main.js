@@ -14,6 +14,7 @@ class Main extends Component{
             isLoaded: false,
             orientacion: false,
             texto: 'fa-align-justify',
+            color: '',
         }
     }
 
@@ -56,6 +57,7 @@ class Main extends Component{
         let moviesQueQuedan = this.state.movies.filter( movie => movie.id !== moviesABorrar );
         this.setState({
             movies: moviesQueQuedan,
+            color: 'red',
         })
     }
 
@@ -94,12 +96,12 @@ class Main extends Component{
                     <section className="card-container">
                         
                             { this.state.isLoaded === false ?
-                                <iframe className="cargando" src="https://giphy.com/embed/17mNCcKU1mJlrbXodo"></iframe>: 
+                                <iframe className="cargando" src="https://giphy.com/gifs/loading-load-freshcake-6036p0cTnjUrNFpAlr"></iframe>: 
                                     this.state.movies.length === 0 ? 
                                 <p>No se encontraron resultados de búsqueda</p> :
                             
                         
-                                <div className={`card-container ${this.state.orientacion ? 'vertical' : 'horizontal'}`}>
+                                <div  className={`card-container ${this.state.orientacion ? 'vertical' : 'horizontal'}`}>
                                             {this.state.movies.map (movie => <Card dataMovies={movie}
                                                 deleteCard={(moviesABorrar)=> this.deleteCard(moviesABorrar)} key={movie.id}/>
                                             )}

@@ -30,12 +30,12 @@ class Card extends Component{
         return(
             <article className="card">
                 <section className="navigation">
-                    <i className="far fa-window-close" onClick={()=> this.props.deleteCard(this.props.dataMovies.id)}></i>
+                    <i className="far fa-window-close" style= {{color: this.state.color}} onClick={()=> this.props.deleteCard(this.props.dataMovies.id)}></i>
                 </section>
                 <main>
                <img src={`https://image.tmdb.org/t/p/w500${this.props.dataMovies.poster_path}`} alt="pelicula"/> 
                     <section className="aditional-info">
-                        <p> {this.props.dataMovies.title} </p>
+                        <p className='title'> {this.props.dataMovies.title} </p>
                         <p> {this.props.dataMovies.overview} </p>
                     </section>
                     <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`} > Fecha de estreno: {this.props.dataMovies.release_date}</p>
