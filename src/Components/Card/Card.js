@@ -24,10 +24,6 @@ class Card extends Component{
        }
     }
 
-    preventAndShow (prevent){
-        prevent.preventDefault ();
-        this.viewMore();
-    }
 
     render(){
         console.log(this.props)
@@ -38,7 +34,7 @@ class Card extends Component{
                         <i className="fas fa-chevron-left"></i>
                         <i className="fas fa-chevron-right"></i>
                     </div>
-                    <i className="far fa-window-close" onClick={()=> this.state.deleteCard(this.state.dataMovies.id)}></i>
+                    <i className="far fa-window-close" onClick={()=> this.props.deleteCard(this.props.dataMovies.id)}></i>
                 </section>
                 <main>
                <img src={`https://image.tmdb.org/t/p/w500${this.props.dataMovies.poster_path}`} alt="pelicula"/> 

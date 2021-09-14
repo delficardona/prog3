@@ -5,7 +5,7 @@ class Header extends Component{
     constructor(props){
         super(props)
         this.state = {
-            value: ''
+            filterBy: ''
 
         }
     }
@@ -17,8 +17,8 @@ preventSubmit(event){
 
 controlarCambios(event){
         this.setState({
-            valor: event.target.value
-        }, () => console.log(this.state.valor))
+            filterBy: event.target.value
+        }, () => this.props.filtrarMovies(this.state.filterBy))
         
     }
 
@@ -32,8 +32,8 @@ controlarCambios(event){
                         <i className="fas fa-th"></i>
                         <i className="fas fa-align-justify"></i>
                         <form action="" onSubmit={(event)=>this.preventSubmit(event)}>
-                            <input type="text" name="search" id="" onChange={(event)=>this.controlarCambios(event)} value={this.state.valor} placehoder='Buscar'/>
-                            <button type="submit"> Enviar <i className="fas fa-search"></i></button>
+                            <input type="text" name="search" id="" placeholder="Buscar Pelicula" onChange={(e)=>this.controlarCambios(e)} value={this.state.filterBy} />
+                           
                         </form>
                     </section> 
                 </header>
