@@ -92,7 +92,7 @@ class Main extends Component{
 
                     <div className="costado">
                         {/* <button className="agregar" type="button" onClick={() => this.addCards()}>Cargar más tarjetas</button> */}
-                        <button class="uk-button uk-button-default" type="button" onClick={() => this.addCards()}>Cargar mas tarjetas</button>
+                        <button className="uk-button uk-button-default" type="button" onClick={() => this.addCards()}>Cargar mas tarjetas</button>
                         {/* <button className="uk-button uk-button-secondary" type="button" onClick={() => this.addCards()}>Cargar mas tarjetas</button> */}
                         <i type="button "className= {`fas ${this.state.texto}`}  onClick={ ()=> this.orientacionCards()}></i> 
                     </div> 

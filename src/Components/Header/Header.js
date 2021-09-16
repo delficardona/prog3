@@ -28,9 +28,9 @@ controlarCambios(event){
                 <header>
                     <section className="header">
                         <img className="logo" src="./images/logo2.png" alt="logo"></img>
-                         <form action="" class="uk-search uk-search-default" onSubmit={(event)=>this.preventSubmit(event)}>
-                            <span class="uk-search-icon-flip" uk-search-icon></span>
-                            <input class="uk-search-input" type="search" name="search" id="" placeholder="Buscar Pelicula" onChange={(e)=>this.controlarCambios(e)} value={this.state.filterBy} />
+                         <form action="" className="uk-search uk-search-default" onSubmit={(event)=>this.preventSubmit(event)}>
+                            <span className="uk-search-icon-flip" uk-search-icon></span>
+                            <input className="uk-search-input" type="search" name="search" id="" placeholder="Buscar Pelicula" onChange={(e)=>this.controlarCambios(e)} value={this.state.filterBy} />
                            
                         </form> 
 
