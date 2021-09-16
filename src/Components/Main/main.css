@@ -28,8 +28,8 @@ article.card{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
-    padding-left: 26px;
+    align-items: center;
+    width: 100%;
 }
 
 .horizontal{

@@ -105,7 +105,7 @@ class Main extends Component{
                                 <p>No se encontraron resultados de búsqueda</p> :
                             
                         
-                                <div  className={`card-container ${this.state.orientacion ? 'vertical' : 'horizontal'}`}>
+                                <div  className={` ${this.state.orientacion ? 'vertical' : 'horizontal'}`}>
                                             {this.state.movies.map (movie => <Card dataMovies={movie}
                                                 deleteCard={(moviesABorrar)=> this.deleteCard(moviesABorrar)} key={movie.id}/>
                                             )}
