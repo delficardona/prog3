@@ -29,10 +29,12 @@ controlarCambios(event){
                     <section className="header">
                         <img src="./images/logo.png" alt="logo"></img>
                         <h1> LD MOVIES</h1>
-                        <form action="" onSubmit={(event)=>this.preventSubmit(event)}>
-                            <input type="text" name="search" id="" placeholder="Buscar Pelicula" onChange={(e)=>this.controlarCambios(e)} value={this.state.filterBy} />
+                         <form action="" class="uk-search uk-search-default" onSubmit={(event)=>this.preventSubmit(event)}>
+                            <span class="uk-search-icon-flip" uk-search-icon></span>
+                            <input class="uk-search-input" type="search" name="search" id="" placeholder="Buscar Pelicula" onChange={(e)=>this.controlarCambios(e)} value={this.state.filterBy} />
                            
-                        </form>
+                        </form> 
+
                     </section> 
                 </header>
             </React.Fragment>
